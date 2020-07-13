@@ -1,4 +1,4 @@
-module.exports = function(api){
+module.exports = function (api) {
   api.cache(true);
   return {
     presets: [
@@ -10,6 +10,9 @@ module.exports = function(api){
         }
       ]
     ],
-    plugins: []
+    plugins: [
+      "@babel/plugin-transform-regenerator",
+      "@babel/plugin-transform-runtime"
+    ]
   };
 }
